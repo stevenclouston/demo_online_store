@@ -6,7 +6,7 @@ This is a checkout system for an online marketplace. It has been designed to be 
 
 **Code Example**
 
-```
+```ruby
 require_relative('checkout')
 require_relative('item')
 require_relative('discount')
