@@ -4,7 +4,7 @@ class Discount
   def initialize(params)
   end
 
-  def calculate
+  def calculate(basket, running_total)
     raise 'Not implemented'
   end
 end
