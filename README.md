@@ -1,14 +1,16 @@
-Synopsis
+
+<H1>***Synopsis***</H1>
 
 This is a checkout system for an online marketplace. It has been designed to be flexible regarding promotional rules, so that rules can be changed easily at any time.
 
 
-Code Example
+<H1>***Code Example***</H1>
 
-
+require 'redcarpet'
+markdown = Redcarpet.new(
 def example_checkout(params)
 
-  multi_buy_discount = MultiBuyDiscount.new({:amount_needed => 2, :product_code => "001", :discount_price => 8.50})
+  multi_buy_discount = MultiBuyDiscount.new({:amount_needed => 2, :code => "001", :discount_price => 8.50})
   percentage_discount = PercentageDiscount.new({:price_threshold => 60, :discount_percent => 10})
   promo_rules = [multi_buy_discount, percentage_discount]
   co = Checkout.new(promo_rules)
@@ -24,29 +26,33 @@ def item_database_hash
   return {"001" => Item.new("Lavender heart", "001", 9.25), "002" => Item.new("Personalised cufflinks", "002", 45), "003" => Item.new("Kids T-shirt", "003", 19.95)}
 end
 
-Installation
+)
+puts markdown.to_html
 
-Clone repo to local.
+<H1>***Installation***</H1>
 
-Tests
+Git clone https://github.com/stevenclouston/demo_online_store.git
+
+<H1>***Tests***</H1>
 
 Run the following line in Terminal to run the tests.
 
 ruby test_with_discount_promotion.rb
 
-Contributors
+<H1>***Contributors***</H1>
 
 Steven Clouston
 
+<H1>***More info about this project***</H1>
 This solution is based on the test below:
 
 The Test
 Our client is an online marketplace, here is a sample of some of the products available on our site:
 Product code  | Name                   | Price
 ----------------------------------------------------------
-001           | Lavender heart         | £9.25
-002           | Personalised cufflinks | £45.00
-003           | Kids T-shirt           | £19.95
+1. 001           | Lavender heart         | £9.25
+2. 002           | Personalised cufflinks | £45.00
+3. 003           | Kids T-shirt           | £19.95
 
 
 Our marketing team want to offer promotions as an incentive for our customers to purchase these items.
