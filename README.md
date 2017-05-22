@@ -1,12 +1,12 @@
 
-<H1>**Synopsis**</H1>
+**Synopsis**
 
 This is a checkout system for an online marketplace. It has been designed to be flexible regarding promotional rules, so that rules can be changed easily at any time.
 
 
-<H1>**Code Example**</H1>
+**Code Example**
 
-'''ruby
+'''
 def example_checkout(params)
 
   multi_buy_discount = MultiBuyDiscount.new({:amount_needed => 2, :code => "001", :discount_price => 8.50})
@@ -23,24 +23,24 @@ example_checkout({items: ["001","002","003"]})
 
 def item_database_hash
   return {"001" => Item.new("Lavender heart", "001", 9.25), "002" => Item.new("Personalised cufflinks", "002", 45), "003" => Item.new("Kids T-shirt", "003", 19.95)}
-end '''
+end
+'''
 
-
-<H1>**Installation**</H1>
+**Installation**
 
 Git clone https://github.com/stevenclouston/demo_online_store.git
 
-<H1>**Tests**</H1>
+**Tests**
 
 Run the following line in Terminal to run the tests.
 
 ruby test_with_discount_promotion.rb
 
-<H1>**Contributors**</H1>
+**Contributors**
 
 Steven Clouston
 
-<H1>**More info about this project**</H1>
+**More info about this project**
 This solution is based on the test below:
 
 The Test
