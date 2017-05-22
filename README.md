@@ -7,6 +7,10 @@ This is a checkout system for an online marketplace. It has been designed to be 
 **Code Example**
 
 ```
+require_relative('checkout')
+require_relative('item')
+require_relative('discount')
+
 def example_checkout(params)
 
   multi_buy_discount = MultiBuyDiscount.new({:amount_needed => 2, :code => "001", :discount_price => 8.50})
@@ -15,7 +19,6 @@ def example_checkout(params)
   co = Checkout.new(promo_rules)
   params[:items].each { |x| co.scan(x)}
   price = co.total
-  end
 end
 
 example_checkout({items: ["001","002","003"]})
