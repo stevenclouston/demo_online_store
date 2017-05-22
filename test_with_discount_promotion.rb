@@ -12,8 +12,8 @@ class Test
   end
 
   def create_rules
-    @multi_buy_discount = MultiBuyDiscount.new({:amount_needed => 2, :code => "001", :discount_price => 8.50})
-    @percentage_discount = PercentageDiscount.new({:price_threshold => 60, :discount_percent => 10})
+    @multi_buy_discount = MultiBuyDiscount.new({amount_needed: 2, code: "001", discount_price: 8.50})
+    @percentage_discount = PercentageDiscount.new({price_threshold: 60, discount_percent: 10})
     @promo_rules = [@multi_buy_discount, @percentage_discount]
   end
 
