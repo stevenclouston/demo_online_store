@@ -7,7 +7,7 @@ This is a checkout system for an online marketplace. It has been designed to be 
 <H1>***Code Example***</H1>
 
 require 'redcarpet'
-markdown = Redcarpet.new(
+markdown = Redcarpet.new("
 def example_checkout(params)
 
   multi_buy_discount = MultiBuyDiscount.new({:amount_needed => 2, :code => "001", :discount_price => 8.50})
@@ -26,7 +26,7 @@ def item_database_hash
   return {"001" => Item.new("Lavender heart", "001", 9.25), "002" => Item.new("Personalised cufflinks", "002", 45), "003" => Item.new("Kids T-shirt", "003", 19.95)}
 end
 
-)
+")
 puts markdown.to_html
 
 <H1>***Installation***</H1>
