@@ -31,9 +31,9 @@ Git clone https://github.com/stevenclouston/demo_online_store.git
 **Tests**
 
 Run the following line in Terminal to run the tests.
-
+```
 ruby test_with_discount_promotion.rb
-
+```
 **Contributors**
 
 Steven Clouston
