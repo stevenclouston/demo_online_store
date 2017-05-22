@@ -19,11 +19,6 @@ def example_checkout(params)
 end
 
 example_checkout({items: ["001","002","003"]})
-
-
-def item_database_hash
-  return {"001" => Item.new("Lavender heart", "001", 9.25), "002" => Item.new("Personalised cufflinks", "002", 45), "003" => Item.new("Kids T-shirt", "003", 19.95)}
-end
 ```
 
 **Installation**
